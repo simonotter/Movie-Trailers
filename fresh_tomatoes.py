@@ -129,6 +129,7 @@ movie_tile_content = '''
     <img src="{poster_image_url}" width="220" height="342">
     <h2>{movie_title}</h2>
     <h3>{release_date}</h3>
+    <p>{story_line}</p>
 </div>
 '''
 
@@ -146,7 +147,8 @@ def create_movie_tiles_content(movies):
             movie_title=movie.title,
             poster_image_url=movie.poster_image_url,
             trailer_youtube_id=trailer_youtube_id,
-            release_date=movie.release_date)
+            release_date=movie.release_date,
+            story_line=movie.storyline)
     return content
 
 def open_movies_page(movies):
